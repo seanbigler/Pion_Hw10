@@ -6,13 +6,17 @@
 /*!
  * Default constructor for MyString Class
  */
-MyString::MyString() {
-
+MyString::MyString()
+{
+    internalCString = make_unique<char[]>(1);
 }
 /*!
  * Constructor with a parameter of a string
  * @param cString
  */
-MyString::MyString(const char *cString) {
+MyString::MyString(const char *cString)
+{
+    // Find length of input array of chars
 
+    internalCString = make_unique<char[]>(nlength+1);
 }

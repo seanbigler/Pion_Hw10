@@ -14,9 +14,11 @@ using namespace std;
 class MyString
 {
 private:
+    unique_ptr<char[]> internalCString;
+    int nlength;
+public:
     MyString();
     MyString(const char *cString);
-public:
     char* getInternalCString() const;
     int getNlength() const;
     void reverseit();
