@@ -8,7 +8,8 @@
  */
 MyString::MyString()
 {
-    internalCString = make_unique<char[]>(1);
+    internalCString = make_unique<char[1]>('\0');
+
 }
 /*!
  * Constructor with a parameter of a string
@@ -19,4 +20,10 @@ MyString::MyString(const char *cString)
     // Find length of input array of chars
 
     internalCString = make_unique<char[]>(nlength+1);
+}
+
+char *MyString::getInternalCString() const
+{
+
+    return nullptr;
 }
