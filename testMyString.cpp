@@ -1,6 +1,8 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "MyString.h"
+#include <memory>
+using namespace std;
 
 /*!
  * @test 1) Testing MyString Constructor

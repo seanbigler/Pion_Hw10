@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <memory>
+using std::unique_ptr;
 //#include <string> // THIS IS NOT ALLOWED. No C++ string class allowed
 using namespace std;
 
