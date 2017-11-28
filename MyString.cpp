@@ -11,6 +11,7 @@ MyString::MyString()
 {
     internalCString = make_unique<char[]>(1);
     internalCString[0] = '\0';
+    nlength = 1;
 
 }
 /*!
@@ -23,7 +24,6 @@ MyString::MyString(const char *cString)
     int i = 0;
     while(*(cString + i) != '\0')
     {
-
         i++;
     }
     nlength = i+1;
@@ -33,9 +33,17 @@ MyString::MyString(const char *cString)
         internalCString[i] = *(cString + i);
     }
 }
-
+/**
+ * Get object's string data member
+ * @return Object's string data member
+ */
 char *MyString::getInternalCString() const
 {
 
     return internalCString.get();
+}
+
+int MyString::getNlength() const
+{
+    return nlength;
 }
