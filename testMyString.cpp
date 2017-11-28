@@ -36,7 +36,7 @@ TEST_CASE("2) Testing MyString Empty")
         REQUIRE(s1 == "");
     }
 }
-//
+
 ///*!
 // * @test 3) Testing MyString Compare Method
 // */
@@ -72,25 +72,25 @@ TEST_CASE("2) Testing MyString Empty")
 //        REQUIRE(ms1.compareStr(ms1, ms3) == -2);
 //    }
 //}
-///*!
-// * @test 4) Testing MyString Revert Method
-// */
-//TEST_CASE("4) Testing MyString Revert")
-//{
-//    INFO("4) Testing MyString Revert");
-//    MyString ms("Hello123");
-//    SECTION("4.1 Test Revert")
-//    {
-//        INFO("4.1 Test Revert");
-//        cout<<"4.1 Test Revert"<<endl;
-//        CAPTURE(ms.getInternalCString());
-//        ms.reverseit();
-//        CAPTURE(ms.getInternalCString());
-//        string s2 = ms.getInternalCString();
-//        REQUIRE(s2 == "321olleH");
-//    }
-//}
-//
+/*!
+ * @test 4) Testing MyString Revert Method
+ */
+TEST_CASE("4) Testing MyString Revert")
+{
+    INFO("4) Testing MyString Revert");
+    MyString ms("Hello123");
+    SECTION("4.1 Test Revert")
+    {
+        INFO("4.1 Test Revert");
+        cout<<"4.1 Test Revert"<<endl;
+        CAPTURE(ms.getInternalCString());
+        ms.reverseit();
+        CAPTURE(ms.getInternalCString());
+        string s2 = ms.getInternalCString();
+        REQUIRE(s2 == "321olleH");
+    }
+}
+
 ///*!
 // * @test 5) Testing MyString << opeartor
 // */

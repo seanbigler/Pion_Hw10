@@ -47,3 +47,23 @@ int MyString::getNlength() const
 {
     return nlength;
 }
+
+void MyString::reverseit()
+{
+    unique_ptr<char[]> temp(new char[nlength]);
+    //temp = make_unique<char[]>(nlength);
+
+    cout << "Hello" << endl;
+    cout << internalCString.get() << endl;
+
+    for (int i = 0; i < nlength; i++)
+    {
+        temp[i] = internalCString[nlength - i];
+    }
+    cout << temp.get() << endl;
+    for (int i = 0; i < nlength; i++)
+    {
+        internalCString[i] = temp[i];
+    }
+    //internalCString = move(temp);
+}
