@@ -80,8 +80,30 @@ int MyString::compareStr(const MyString &lhs, const MyString &rhs) {
     int lhLength = lhs.getNlength();
     int rhLength = rhs.getNlength();
     int difference = lhLength-rhLength;
-    if(difference==0){//if the 2 strings are the same in length, then see if they are different strings
+    int result = 0;
+    if(difference==0)
+    {
+        //if the 2 strings are the same in length, then see if they are different strings
+        for(int i = 0; i < rhLength; i++)
+        {
+            if(lhs.internalCString[i] == rhs.internalCString[i])
+            {
+                result = 0;
+            } else
+            {
+                result = -2;
+                break;
+            }
 
+        }
     }
-    return difference;
+    else if (difference > 0)
+    {
+       result = 1;
+    }
+    else if (difference < 0)
+    {
+        result = -1;
+    }
+    return result;
 }
