@@ -47,23 +47,26 @@ int MyString::getNlength() const
 {
     return nlength;
 }
-
+/**
+ * Will reverse string of chars
+ */
 void MyString::reverseit()
 {
     unique_ptr<char[]> temp(new char[nlength]);
     //temp = make_unique<char[]>(nlength);
 
-    cout << "Hello" << endl;
-    cout << internalCString.get() << endl;
 
     for (int i = 0; i < nlength; i++)
     {
-        temp[i] = internalCString[nlength - i];
+        temp[i] = internalCString[nlength - (i + 2)];
+        //cout << i << ": " << temp[i] << endl;
     }
-    cout << temp.get() << endl;
-    for (int i = 0; i < nlength; i++)
-    {
-        internalCString[i] = temp[i];
-    }
-    //internalCString = move(temp);
+    temp[nlength - 1] = '\0';
+    //cout << temp.get() << endl;
+//    for (int i = 0; i < nlength; i++)
+//    {
+//        internalCString[i] = temp[i];
+//        //cout << internalCString[i] << endl;
+//    }
+    internalCString = move(temp);
 }
