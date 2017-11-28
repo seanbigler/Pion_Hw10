@@ -107,7 +107,12 @@ int MyString::compareStr(const MyString &lhs, const MyString &rhs) {
     }
     return result;
 }
-
+/**
+ * Operator overload << for MyString class
+ * @param os system os
+ * @param myString reference to object
+ * @return os output of object
+ */
 ostream &operator<<(ostream &os, const MyString &myString)
 {
     os << myString.getInternalCString();
