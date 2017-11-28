@@ -37,41 +37,41 @@ TEST_CASE("2) Testing MyString Empty")
     }
 }
 
-///*!
-// * @test 3) Testing MyString Compare Method
-// */
-//TEST_CASE("3) Testing MyString Compare")
-//{
-//    INFO("3) Testing MyString Compare");
-//    MyString ms1("Hello123");
-//    MyString ms2("Hello123");
-//    MyString ms3("Fello123");
-//    MyString ms4("Hello12");
-//    SECTION("3.1 Test Compare ms1 > ms2")
-//    {
-//        INFO("3.1 Test Compare ms1 > ms2");
-//        std::cout<<"3.1 Test Compare ms1 > ms2"<<endl;
-//        REQUIRE(ms1.compareStr(ms1, ms4) == 1);
-//    }
-//    SECTION("3.2 Test Compare ms1 < ms2")
-//    {
-//        INFO("3.2 Test Compare ms1 < ms2");
-//        std::cout<<"3.2 Test Compare ms1 < ms2"<<endl;
-//        REQUIRE(ms1.compareStr(ms4, ms1) == -1);
-//    }
-//    SECTION("3.3 Test Compare ms1 == ms2")
-//    {
-//        INFO("3.3 Test Compare ms1 == ms2 (equal)");
-//        std::cout<<"3.3 Test Compare ms1 == ms2 (equal)"<<endl;
-//        REQUIRE(ms1.compareStr(ms1, ms2) == 0);
-//    }
-//    SECTION("3.4 Test Compare ms1 == ms2 (equal length, different string")
-//    {
-//        INFO("3.4 Test Compare ms1 == ms2 (equal length, different string");
-//        cout<<"3.4 Test Compare ms1 == ms2 (equal length, different string"<<endl;
-//        REQUIRE(ms1.compareStr(ms1, ms3) == -2);
-//    }
-//}
+/*!
+ * @test 3) Testing MyString Compare Method
+ */
+TEST_CASE("3) Testing MyString Compare")
+{
+    INFO("3) Testing MyString Compare");
+    MyString ms1("Hello123");
+    MyString ms2("Hello123");
+    MyString ms3("Fello123");
+    MyString ms4("Hello12");
+    SECTION("3.1 Test Compare ms1 > ms2")
+    {
+        INFO("3.1 Test Compare ms1 > ms2");
+        std::cout<<"3.1 Test Compare ms1 > ms2"<<endl;
+        REQUIRE(ms1.compareStr(ms1, ms4) == 1);
+    }
+    SECTION("3.2 Test Compare ms1 < ms2")
+    {
+        INFO("3.2 Test Compare ms1 < ms2");
+        std::cout<<"3.2 Test Compare ms1 < ms2"<<endl;
+        REQUIRE(ms1.compareStr(ms4, ms1) == -1);
+    }
+    SECTION("3.3 Test Compare ms1 == ms2")
+    {
+        INFO("3.3 Test Compare ms1 == ms2 (equal)");
+        std::cout<<"3.3 Test Compare ms1 == ms2 (equal)"<<endl;
+        REQUIRE(ms1.compareStr(ms1, ms2) == 0);
+    }
+    SECTION("3.4 Test Compare ms1 == ms2 (equal length, different string")
+    {
+        INFO("3.4 Test Compare ms1 == ms2 (equal length, different string");
+        cout<<"3.4 Test Compare ms1 == ms2 (equal length, different string"<<endl;
+        REQUIRE(ms1.compareStr(ms1, ms3) == -2);
+    }
+}
 /*!
  * @test 4) Testing MyString Revert Method
  */

@@ -70,3 +70,18 @@ void MyString::reverseit()
 //    }
     internalCString = move(temp);
 }
+/*!
+ * This compares 2 different strings to see if they are the same
+ * @param lhs : This is the left hand side string that is being compared
+ * @param rhs : THis is what the left hand string is being compared to (right hand string)
+ * @return
+ */
+int MyString::compareStr(const MyString &lhs, const MyString &rhs) {
+    int lhLength = lhs.getNlength();
+    int rhLength = rhs.getNlength();
+    int difference = lhLength-rhLength;
+    if(difference==0){//if the 2 strings are the same in length, then see if they are different strings
+
+    }
+    return difference;
+}
