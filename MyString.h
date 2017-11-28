@@ -25,5 +25,6 @@ public:
     void reverseit();
     int compareStr(const MyString &lhs, const MyString &rhs);
 };
+ostream & operator <<(ostream &os, const MyString & myString);
 
 #endif //HW7_MYSTRING_H

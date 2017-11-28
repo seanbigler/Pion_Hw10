@@ -107,3 +107,10 @@ int MyString::compareStr(const MyString &lhs, const MyString &rhs) {
     }
     return result;
 }
+
+ostream &operator<<(ostream &os, const MyString &myString)
+{
+    os << myString.getInternalCString();
+
+    return os;
+}
